@@ -1,10 +1,13 @@
 export default function Home() {
    return (
-      <main className="flex min-h-screen flex-col items-center justify-center p-24">
-         <section className="w-screen h-screen flex items-center justify-center bg-stone-400">
-            <div className="flex items-center justify-center"></div>
-            <h1 className="m-3 p-4 bg-indigo-500">Section 1</h1>
-            <h1 className="m-3 p-4 bg-orange-800">Section 1</h1>
+      <main className="flex min-h-screen flex-col items-center justify-center py-0">
+         <section className=" w-screen h-screen flex items-center justify-center bg-stone-400">
+            <h1 className="m-3 p-4 w-24 h-24 text-center bg-indigo-500 hover:grow">
+               Section 1
+            </h1>
+            <h1 className="m-3 p-4 w-24 h-24 text-center bg-orange-800 grow-0">
+               Section 1
+            </h1>
          </section>
          <section className="w-screen h-screen flex items-center justify-center bg-red-500 ">
             <h1 className="m-3 p-4 bg-indigo-500">Section 2</h1>
