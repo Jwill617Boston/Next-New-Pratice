@@ -1,8 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-   apiKey: process.env.FIREBASE_API_KEY,
+   apiKey: "AIzaSyCUClYvkmI7fFd1Y0N1F9fc1-iSOu-RaGk",
    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
    projectId: process.env.PROJECT_ID,
    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
@@ -13,6 +14,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
-export { app, analytics, firebaseConfig };
+const db = getFirestore(app);
+
+const auth = getAuth(app);
+
+export { db, auth };
